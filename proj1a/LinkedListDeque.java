@@ -16,14 +16,14 @@ public class LinkedListDeque<T> {
 
     /** Empty list. */
     public LinkedListDeque(){
-        sentinel = new TNode(null, null, null);
+        sentinel = new TNode((T)null, null, null);
         sentinel.next = sentinel;
         sentinel.prev = sentinel;
         size = 0;
     }
 
     public LinkedListDeque(T item){
-        sentinel = new TNode(item, null, null);
+        sentinel = new TNode((T)null, null, null);
         sentinel.next = new TNode(item, sentinel, sentinel);
         sentinel.prev = sentinel.next;
         size = 1;
@@ -108,12 +108,5 @@ public class LinkedListDeque<T> {
         TNode ptr = sentinel.next;
         return getRecursiveHelper(index, ptr);
     }
-
-
-
-
-
-
-
 
 }
