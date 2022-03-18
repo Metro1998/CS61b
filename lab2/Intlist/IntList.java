@@ -101,6 +101,13 @@ public class IntList {
         return new IntList(A.first, catenate(A.rest, B));
     }
 
+    public static void main(String[] args){
+        IntList A = IntList.of(1, 2, 3);
+        IntList B = IntList.of(4, 5, 6);
+        IntList C = IntList.catenate(A, B);
+        System.out.println(C);
+    }
+
 
 
 
@@ -238,5 +245,3 @@ public class IntList {
         return out.toString();
     }
 }
-
-
