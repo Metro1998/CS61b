@@ -69,10 +69,11 @@ public class LinkedListDeque<T> {
         if (size == 0){
             return null;
         }
+        T res = sentinel.next.item;
         sentinel.next = sentinel.next.next;
         sentinel.next.prev = sentinel;
         size -= 1;
-        return sentinel.next.item;
+        return res;
     }
 
     /** Remove and return the last element of the list. */
@@ -80,10 +81,11 @@ public class LinkedListDeque<T> {
         if (size == 0){
             return null;
         }
+        T res = sentinel.prev.item;
         sentinel.prev = sentinel.prev.prev;
         sentinel.prev.next = sentinel;
         size -= 1;
-        return sentinel.prev.item;
+        return res;
     }
 
     /** Gets the item at the given index. */
