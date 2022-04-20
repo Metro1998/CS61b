@@ -117,7 +117,7 @@ public class ArrayDeque<T>{
     private void resie(int new_capacity){
         T[] NewArrayDeque = (T[]) new Object[new_capacity];
 
-        int size = size()
+        int size = size();
         if (left < right){
             System.arraycopy(items, left, NewArrayDeque, 0, size());
         }
