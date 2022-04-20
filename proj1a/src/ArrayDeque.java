@@ -84,15 +84,15 @@ public class ArrayDeque<T>{
     public void printDeque(){
         if (left < right){
             for (int i=left; i<right; i++){
-                System.out.print(items[i] + "");
+                System.out.print(items[i] + " ");
             }
         }
         else {
             for (int i=left; i<capacity; i++){
-                System.out.print(items[i] + "");
+                System.out.print(items[i] + " ");
             }
             for (int i=0; i<right; i++){
-                System.out.print(items[i] + "");
+                System.out.print(items[i] + " ");
             }
         }
         System.out.println();
@@ -134,12 +134,18 @@ public class ArrayDeque<T>{
         items = NewArrayDeque;
         capacity = new_capacity;
         left = 0;
-        right = size();
+        right = size;
     }
 
     private boolean isLowUsageRate() {
         return capacity >= 16 && size() / (double) capacity < 0.25;
     }
 
+    public int getRight(){
+        return right;
+    }
 
+    public int getLeft(){
+        return left;
+    }
 }
