@@ -83,15 +83,15 @@ public class ArrayDeque<T>{
     /**Prints the items in the deque from first to last, separated by a space.*/
     public void printDeque(){
         if (left < right){
-            for (i=left; i<right; i++){
+            for (int i=left; i<right; i++){
                 System.out.print(items[i] + "");
             }
         }
         else {
-            for (i=left; i<capacity; i++){
+            for (int i=left; i<capacity; i++){
                 System.out.print(items[i] + "");
             }
-            for (i=0; i<right; i++){
+            for (int i=0; i<right; i++){
                 System.out.print(items[i] + "");
             }
         }
@@ -115,7 +115,7 @@ public class ArrayDeque<T>{
 
     /** Resize the ArrayDeque to a new capacity.*/
     private void resie(int new_capacity){
-        T[] NewArrayDeque = (T[]) new object(new_capacity);
+        T[] NewArrayDeque = (T[]) new Object[new_capacity];
         if (left < right){
             System.arraycopy(items, left, NewArrayDeque, 0, size());
         }
